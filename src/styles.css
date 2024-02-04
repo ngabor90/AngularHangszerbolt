@@ -1,1 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+nav, h1, h2, footer{
+    font-family: 'Oswald', sans-serif;
+}

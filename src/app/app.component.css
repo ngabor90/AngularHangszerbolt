@@ -1,0 +1,20 @@
+.navbar-nav{
+    padding-left: 90px;
+}
+
+.navbar-nav a{
+    padding-left: 90px;
+    font-size: large;
+}
+
+nav, footer{
+    background-color: rgb(4, 67, 167);
+}
+
+a, footer{
+    color: rgb(215, 217, 206);
+}
+
+::ng-deep body {
+    background-color: rgb(206, 186, 207);
+}

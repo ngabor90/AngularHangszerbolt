@@ -1,0 +1,56 @@
+<div class="container my-2">
+    <div class="row">
+        <div class="col-12">
+            <h2>Kérdések</h2>
+
+            <div class="form-group my-2">
+                <label class="form-label" for="name">Név</label>
+                <input [(ngModel)]="n" placeholder="Tóth Lajos" class="form-control" type="text" name="name" id="name"><br>
+            </div>
+
+            <div class="form-group my-2">
+                <label class="form-label" for="email">Email cím</label>
+                <input [(ngModel)]="e" placeholder="minta@minta.hu" class="form-control" type="email" name="email" id="email"><br>
+            </div>
+
+            <div class="form-group my-2">
+                <label class="form-label" for="mobile">Telefonszám</label>
+                <input [(ngModel)]="m" placeholder="06-30-11-111-111" class="form-control" type="text" name="mobile" id="mobile"><br>
+            </div>
+
+            <div class="form-group my-2">
+                <label class="form-label" for="question">Üzenet</label>
+                <textarea [(ngModel)]="q" placeholder="Üzenet helye" class="form-control" name="question" id="question" cols="30" rows="10"></textarea>
+            </div>
+
+            <div class="form-group my-2">
+                <input type="checkbox" checked="checked" id="aszf" title="aszf"><br>
+                <label class="form-label" for="aszf">Elfogadom az általános feltételeket</label>
+            </div>
+
+            <button class="btn btn-primary my-2" (click)="ask()">Küldés</button><br>
+        </div>
+
+        <div class="col-12">
+            <table class="table table-striped">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Név</th>
+                        <th>Email cím</th>
+                        <th>Telefonszám</th>
+                        <th>Üzenet</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let q of questions">
+                        <td>{{q.name}}</td>
+                        <td>{{q.email}}</td>
+                        <td>{{q.mobile}}</td>
+                        <td>{{q.question}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
